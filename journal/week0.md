@@ -24,4 +24,16 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 
 ![Logical diagram](./assets/Crudder-logical-diagram.png)
 
+### Billing Alarm and Budget
+I created a billing alarm and budget using both the AWS console and the CLI using Gitpod
+
 ## Homework Challenges
+Destroy your root account credentials, Set MFA, IAM role - Done
+
+Review all the questions of each pillars in the Well Architected Tool (No specialized lens) - Done
+
+Create an architectural diagram (to the best of your ability) the CI/CD logical pipeline in Lucid Charts -
+I have two diagrams(Logical and Conceptual diagrams) already in Lucid chart, so creating another one exceeds the free tier limit
+
+
+
