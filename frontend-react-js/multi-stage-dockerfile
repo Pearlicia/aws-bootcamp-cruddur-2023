@@ -1,0 +1,29 @@
+# Stage 1: Build stage
+FROM node:16.18 as builder
+
+WORKDIR /frontend-react-js
+
+COPY package.json .
+COPY package-lock.json .
+
+RUN npm ci
+
+COPY . .
+
+RUN npm run build
+
+# Stage 2: Production stage
+FROM node:16.18 as production
+
+ENV PORT=3000
+
+WORKDIR /app
+
+COPY --from=builder /frontend-react-js/build ./build
+COPY --from=builder /frontend-react-js/entrypoint.sh .
+
+RUN chmod +x entrypoint.sh
+
+EXPOSE ${PORT}
+
+ENTRYPOINT ["/bin/bash", "entrypoint.sh"]

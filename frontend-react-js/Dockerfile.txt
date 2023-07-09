@@ -10,4 +10,4 @@ RUN npm install
 
 EXPOSE ${PORT}
 
-ENTRYPOINT ["/bin/bash", "/frontend-react-js/entrypoint.sh"]
+CMD ["npm", "start"]
