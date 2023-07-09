@@ -6,8 +6,8 @@
 I created a repo using the CRUDDUR repo template and launch the repo within gitpod workspace. Configured gitpod.yml for VSCode Extensions.
 I opened the frontend and backend code in gitpod to explore the codebases, I started both apps to run locally.
 I wrote dockerfile for both frontend and backend, and built the docker images and ran the apps in individual containers.
-Then created a docker compose file to build multiple images and ran the containers succesfully
-I also mounted directories so to make changes while I code
+Then created a docker compose file to build multiple images and ran the containers successfully.
+I also mounted directories so to make changes while I code.
 
 
 ## Homework Challenges    
