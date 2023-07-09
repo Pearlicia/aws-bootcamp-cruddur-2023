@@ -26,7 +26,7 @@ I also mounted directories so to make changes while I code
 ### healthcheck Implementation in the V3 Docker compose file
 ![Proof of healthcheck implementation](./assets/weekone/health-check.png)
 
-### Research best practices of Dockerfiles and attempt to implement it in your Dockerfile
+### Researched best practices of Dockerfiles and implemented them in my Dockerfile
  - I used official base images from trusted sources like Docker Hub. Because they are typically well-maintained, regularly updated, and come with proper security considerations.
 
  - I kept my images small by minimizing the size of my Docker images by optimizing the layers, reducing the number of dependencies, and removing unnecessary files. Using multi-stage builds to separate build dependencies from the final production image.
@@ -36,7 +36,7 @@ I also mounted directories so to make changes while I code
  - I included health checks within my Docker Compose file to verify the health of my containerized application. This helps monitoring tools and orchestrators determine the state of the application and take appropriate actions if necessary.
 
 
-### Install Docker on your localmachine and get the same containers running outside of Gitpod / Codespaces
+### Install Docker on my local machine and get the same containers running outside of Gitpod / Codespaces
 ![Proof of running containers on local machine](./assets/weekone/running-containers.png)
 
 ### Launched an EC2 instance that has docker installed, and pulled a container to demonstrate I can run my own docker processes. 
