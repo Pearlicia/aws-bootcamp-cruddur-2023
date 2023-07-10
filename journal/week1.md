@@ -8,6 +8,8 @@ I opened the frontend and backend code in gitpod to explore the codebases, I sta
 I wrote dockerfile for both frontend and backend, and built the docker images and ran the apps in individual containers.
 Then created a docker compose file to build multiple images and ran the containers successfully.
 I also mounted directories so to make changes while I code.
+I installed DynamoDB local and postgres in gitpod. Built images on them that ran successfully.
+
 
 
 ## Homework Challenges    
