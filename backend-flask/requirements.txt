@@ -10,3 +10,5 @@ opentelemetry-instrumentation-requests
 honeycomb-opentelemetry
 
 aws-xray-sdk
+
+watchtower
