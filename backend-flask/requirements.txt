@@ -12,3 +12,6 @@ honeycomb-opentelemetry
 aws-xray-sdk
 
 watchtower
+
+blinker
+rollbar
