@@ -8,3 +8,5 @@ opentelemetry-instrumentation-flask
 opentelemetry-instrumentation-requests
 
 honeycomb-opentelemetry
+
+aws-xray-sdk
