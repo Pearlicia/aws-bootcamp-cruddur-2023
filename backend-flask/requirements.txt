@@ -7,8 +7,7 @@ opentelemetry-exporter-otlp-proto-http
 opentelemetry-instrumentation-flask 
 opentelemetry-instrumentation-requests
 
-honeycomb-opentelemetry
-
+honeycomb-opentelemetry==0.2.1b0
 aws-xray-sdk
 
 watchtower
