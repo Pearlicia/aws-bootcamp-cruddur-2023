@@ -16,7 +16,7 @@ services:
 
     build: ./backend-flask
     ports:
-      - "4567:4567"
+      - 4567:4567
     volumes:
       - ./backend-flask:/backend-flask
     healthcheck:
@@ -30,7 +30,7 @@ services:
       REACT_APP_BACKEND_URL: "https://localhost:4567"
     build: ./frontend-react-js
     ports:
-      - "3000:3000"
+      - 3000:3000
     volumes:
       - ./frontend-react-js:/frontend-react-js
     healthcheck:
@@ -48,7 +48,7 @@ services:
     image: "amazon/dynamodb-local:latest"
     container_name: dynamodb-local
     ports:
-      - "8000:8000"
+      - 8000:8000
     volumes:
       - "./docker/dynamodb:/home/dynamodblocal/data"
     working_dir: /home/dynamodblocal
@@ -60,7 +60,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
     ports:
-      - '6432:5432'
+      - 6432:5432
     volumes: 
       - db:/var/lib/postgresql/data
 
