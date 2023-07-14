@@ -32,7 +32,6 @@ import watchtower
 import logging
 from time import strftime
 
-
 # Rollbar ------
 import os
 import rollbar
@@ -98,24 +97,9 @@ def after_request(response):
 
 
 # Rollbar ----------
-# @app._got_first_request
-# def init_rollbar(rollbar_access_token):
-#     if rollbar_access_token:
-
-#       """init rollbar module"""
-#       rollbar.init(
-#           # access token
-#           rollbar_access_token,
-#           # environment name
-#           'production',
-#           # server root directory, makes tracebacks prettier
-#           root=os.path.dirname(os.path.realpath(__file__)),
-#           # flask already sets up logging
-#           allow_logging_basic_config=False)
-
-#       # send exceptions from `app` to rollbar, using flask's signal system.
-#       got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
 rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')
+
+
 def init_rollbar(rollbar_access_token):
     if rollbar_access_token:
         # Initialize Rollbar
@@ -131,6 +115,9 @@ def init_rollbar(rollbar_access_token):
 
         # send exceptions from `app` to rollbar, using flask's signal system.
         got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
+
+if rollbar_access_token:
+    init_rollbar(rollbar_access_token)
 
 @app.route('/rollbar/test')
 def rollbar_test():
