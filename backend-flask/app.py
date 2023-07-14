@@ -171,6 +171,7 @@ def data_create_message():
     return model['data'], 200
   return
 
+@app.route("/api/activities/home", methods=['GET'])
 def data_home():
   data = HomeActivities.run(Logger=LOGGER)
   return data, 200
