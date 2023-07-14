@@ -30,9 +30,10 @@ from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
 # CloudWatch Logs ----
 import watchtower
 import logging
+from time import strftime
+
 
 # Rollbar ------
-from time import strftime
 import os
 import rollbar
 import rollbar.contrib.flask
@@ -97,7 +98,6 @@ def after_request(response):
 
 
 # Rollbar ----------
-rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')
 # @app._got_first_request
 # def init_rollbar(rollbar_access_token):
 #     if rollbar_access_token:
@@ -115,7 +115,7 @@ rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')
 
 #       # send exceptions from `app` to rollbar, using flask's signal system.
 #       got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
-
+rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')
 def init_rollbar(rollbar_access_token):
     if rollbar_access_token:
         # Initialize Rollbar
