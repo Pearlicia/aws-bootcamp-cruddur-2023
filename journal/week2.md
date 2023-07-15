@@ -2,14 +2,23 @@
 
 ## Required Tasks
 
-### I successfully Implemented Cloudwatch logs
+I did Instrument the backend application to use Open Telemetry (OTEL) with Honeycomb as the provider
+I also Instrumented AWS X-Ray into the backend application
+I configured and provisioned X-Ray daemon within docker-compose and send data back to X-Ray API
+And observed X-Ray traces within the AWS Console
+I integrated Rollbar for error logging, triggered an error and observed the error with Rollbar
+I did Install watchtower and wrote a custom logger to send application log data to cloudwatch log group
+
+### Proof of Cloudwatch logs Implementation
 ![cloudwatch log image](./assets/weektwo/cloudwatch.png)
 
-### I successfully Implemented AWS X-RAY 
+### Proof of AWS X-RAY Implementation
 ![x-ray image](./assets/weektwo/xray.png)
 
-### I successfully Instrumented Honeycomb 
+### Proof of Honeycomb Instrumentation
 ![honeycomb image](./assets/weektwo/honeycomb.png)
 
-### I successfully Instrumented Rollbar 
+### Proof of Rollbar Instrumentation
 ![x-ray image](./assets/weektwo/rollbar-proof.png)
+
+
