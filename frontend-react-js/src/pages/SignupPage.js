@@ -4,7 +4,7 @@ import {ReactComponent as Logo} from '../components/svg/logo.svg';
 import { Link } from "react-router-dom";
 
 // [TODO] Authenication
-import Cookies from 'js-cookie'
+import { Auth } from 'aws-amplify';
 
 export default function SignupPage() {
 
@@ -42,6 +42,7 @@ export default function SignupPage() {
     }
     return false
   }
+
 
   const name_onchange = (event) => {
     setName(event.target.value);
