@@ -20,6 +20,8 @@ aws rds create-db-instance \
   --performance-insights-retention-period 7 \
   --no-deletion-protection
 
+  # Add time zone and character set
+
   # After db creation connect to it from terminal using psql
 
   psql -U postgres --host localhost
