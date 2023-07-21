@@ -22,4 +22,4 @@ aws rds create-db-instance \
 
   # After db creation connect to it from terminal using psql
 
-  psql -U postgres -h localhost
+  psql -U postgres --host localhost
