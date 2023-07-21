@@ -1,4 +1,4 @@
-Create rds postgres db via aws clickops
+# Create rds postgres db via aws clickops
 
 aws rds create-db-instance \
   --db-instance-identifier cruddur-db-instance \
@@ -19,3 +19,7 @@ aws rds create-db-instance \
   --enable-performance-insights \
   --performance-insights-retention-period 7 \
   --no-deletion-protection
+
+  # After db creation connect to it from terminal using psql
+
+  psql -U postgres -h localhost
