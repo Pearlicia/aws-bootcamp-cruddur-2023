@@ -115,6 +115,9 @@ sed - stream editor for filtering and transforming text
 Sed  is  a stream editor.  A stream editor is used to perform basic text transformations on an input stream
 (a file or input from a pipeline).  While in some ways
 
+# Sessions script to see the running db processes run it to kill the processes
+
+
 
 
 
