@@ -117,6 +117,8 @@ Sed  is  a stream editor.  A stream editor is used to perform basic text transfo
 
 # Sessions script to see the running db processes run it to kill the processes
 
+# lib/db.py
+Add psycopg3 driver for connection, could use sqlalchemy orm instead
 
 
 
