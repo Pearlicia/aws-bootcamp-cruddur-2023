@@ -47,4 +47,79 @@ INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...); -- 
 UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition; -- Update data in a table
 DELETE FROM table_name WHERE condition; -- Delete data from a table
 
+
+# We can use the createdb command to create our database:
+createdb cruddur -h localhost -U postgres
+
+# We can create the database within the PSQL client
+CREATE database cruddur;
+
+# Delete database
+DROP database cruddur;
+
+# Import Script
+# We'll create a new SQL file called schema.sql and we'll place it in backend-flask/db
+
+# The command to import:
+
+psql cruddur < db/schema.sql -h localhost -U postgres
+
+Add UUID Extension
+We are going to have Postgres generate out UUIDs. We'll need to use an extension called:
+
+CREATE EXTENSION "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+# Add this to schema.sql file
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+# Then run this in terminal - cd to backend dir
+
+psql cruddur < db/schema.sql -h localhost -U postgres
+
+Password is password
+
+# Connection String 
+postgresql://postgres:pssword@127.0.0.1:5433/cruddur
+
+# So to connect
+psql postgresql://postgres:pssword@127.0.0.1:5433/cruddur
+
+# Add to gitpod env
+export CONNECTION_URL="postgresql://postgres:pssword@127.0.0.1:5433/cruddur"
+gp env CONNECTION_URL="postgresql://postgres:pssword@127.0.0.1:5433/cruddur"
+
+# Then 
+psql $CONNECTION_URL
+
+# PROD DB
+export PROD_CONNECTION_URL="postgresql://cruddurroot:pssword@awspostgresendpoint:5433/cruddur"
+gp env PROD_CONNECTION_URL="postgresql://cruddurroot:pssword@awspostgresendpoint:5433/cruddur"
+
+# Then 
+psql $PROD_CONNECTION_URL
+
+# Create bin dir in backend then create bash files
+# To run the bash files
+
+ls -l ./bin      # to check if files have permissions
+chmod u+x bin/db-create    # Add permissions to execute do it on all bin files
+
+chmod +x bin/db-create    # Do this instead
+
+./bin/db-drop or source /bin/db-drop
+
+# Sed command
+run man sed
+sed - stream editor for filtering and transforming text
+Sed  is  a stream editor.  A stream editor is used to perform basic text transformations on an input stream
+(a file or input from a pipeline).  While in some ways
+
+
+
+
+
+
+
+
   
